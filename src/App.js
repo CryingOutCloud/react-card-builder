@@ -143,6 +143,10 @@ function App() {
       name: "Yu-Gi-Oh",
       backImage: "./yugioh/cards/normal_back.png",
     },
+    {
+      name: "Mtg",
+      backImage: "./mtg/cards/normal_back.png",
+    },
   ];
 
   const saveAsImage = () => {
