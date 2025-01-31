@@ -208,6 +208,15 @@ function App() {
                   setInputValues={setInputValues}
                 />
               )}
+
+              {cardBuilderType === 2 && (
+                <MtgForm
+                  inputValues={inputValues}
+                  handleInputChange={handleInputChange}
+                  handleFileChange={handleFileChange}
+                  setInputValues={setInputValues}
+                />
+              )}
             </div>
             <div className="w-full mt-4">
               <div
