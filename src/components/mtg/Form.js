@@ -36,15 +36,12 @@ const MtgForm = ({
           className="cursor-pointer bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-800 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           value={inputValues.mtgTemplate}
         >
-          <option value="normal">Normal</option>
-          <option value="effect">Effect</option>
-          <option value="trap">Trap</option>
-          <option value="spell">Spell</option>
-          <option value="fusion">Fusion</option>
-          <option value="ritual">Ritual</option>
-          <option value="token">Token</option>
-          <option value="synchro">Synchro</option>
-          <option value="dark-synchro">Dark Syncrho</option>
+          <option value="none">None</option>
+          <option value="white">White</option>
+          <option value="blue">Blue</option>
+          <option value="black">Black</option>
+          <option value="red">Red</option>
+          <option value="green">Green</option>
         </select>
       </div>
 
