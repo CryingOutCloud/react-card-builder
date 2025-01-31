@@ -6,6 +6,8 @@ import LorcanaCard from "./components/lorcana/Card";
 import LorcanaForm from "./components/lorcana/Form";
 import YugiohCard from "./components/yugioh/Card";
 import YugiohForm from "./components/yugioh/Form";
+import MtgCard from "./components/mtg/Card";
+import MtgForm from "./components/mtg/Form";
 import { toPng } from "html-to-image";
 import { jsPDF } from "jspdf";
 import "react-material-symbols/rounded";
@@ -248,6 +250,14 @@ function App() {
 
               {cardBuilderType === 1 && (
                 <YugiohCard
+                  canvasPath={canvasPath}
+                  inputValues={inputValues}
+                  ref={divRef}
+                />
+              )}
+
+              {cardBuilderType === 1 && (
+                <MtgCard
                   canvasPath={canvasPath}
                   inputValues={inputValues}
                   ref={divRef}

@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import "react-material-symbols/rounded";
 
-const YugiohCard = forwardRef(
+const MtgCard = forwardRef(
   ({ inputValues, templateImage, cardImage }, ref) => {
     return (
       <div ref={ref} className="w-[750px] h-auto aspect-[7/10] relative">
@@ -11,18 +11,18 @@ const YugiohCard = forwardRef(
         ></div>
 
         <img
-          src={"./yugioh/cards/" + inputValues.yugiohTemplate + ".png"}
+          src={"./mtg/cards/" + inputValues.mtgTemplate + ".png"}
           className="select-none absolute top-0 left-0 right-0 bottom-0 h-full w-full object-fit"
           alt={"TCG Card Builder by John Uberbacher"}
         />
 
         <img
           src={
-            inputValues.yugiohTemplate === "spell"
-              ? "./yugioh/icons/spell.png"
-              : inputValues.yugiohTemplate === "trap"
-              ? "./yugioh/icons/trap.png"
-              : "./yugioh/icons/" + inputValues.yugiohElement + ".png"
+            inputValues.mtgTemplate === "spell"
+              ? "./mtg/icons/spell.png"
+              : inputValues.mtgTemplate === "trap"
+              ? "./mtg/icons/trap.png"
+              : "./mtg/icons/" + inputValues.mtgElement + ".png"
           }
           alt={"TCG Card Builder by John Uberbacher"}
           className="select-none absolute top-[48px] right-[50px]"
@@ -35,59 +35,59 @@ const YugiohCard = forwardRef(
           {inputValues.name}
         </div>
 
-        {inputValues.yugiohTemplate !== "spell" &&
-          inputValues.yugiohTemplate !== "trap" && (
+        {inputValues.mtgTemplate !== "spell" &&
+          inputValues.mtgTemplate !== "trap" && (
             <div className="absolute flex flex-row top-[126px] right-[74px] gap-0.5">
-              {Array.from({ length: inputValues.yugiohLevel }, (_, index) => (
+              {Array.from({ length: inputValues.mtgLevel }, (_, index) => (
                 <div
                   key={index}
                   className="w-[49px] h-auto aspect-[1/1] relative bg-cover bg-center"
                   style={{
-                    backgroundImage: `url("./yugioh/icons/level.png")`,
+                    backgroundImage: `url("./mtg/icons/level.png")`,
                   }}
                 ></div>
               ))}
             </div>
           )}
 
-        {(inputValues.yugiohTemplate === "spell" ||
-          inputValues.yugiohTemplate === "trap") && (
+        {(inputValues.mtgTemplate === "spell" ||
+          inputValues.mtgTemplate === "trap") && (
           <div className="select-none absolute top-[113px] right-[68px] font-ygo-stone-serif-sc-bold text-[41.75px]">
-            [{inputValues.yugiohTemplate} Card]
+            [{inputValues.mtgTemplate} Card]
           </div>
         )}
 
-        {inputValues.yugiohTemplate === "spell" ||
-        inputValues.yugiohTemplate === "trap" ? (
+        {inputValues.mtgTemplate === "spell" ||
+        inputValues.mtgTemplate === "trap" ? (
           <div></div>
         ) : (
           <div className="absolute top-[803px] left-[58px] text-[28px] font-ygo-stone-serif-sc-bold">
-            {"[" + inputValues.yugiohCardType + "]"}
+            {"[" + inputValues.mtgCardType + "]"}
           </div>
         )}
 
         <div className="absolute left-[82px] bottom-[270px] text-[30px] font-ygo-matrix-sc-2 text-left">
-          {inputValues.yugiohEdition}
+          {inputValues.mtgEdition}
         </div>
 
         <div className="absolute right-[82px] bottom-[270px] text-[30px] font-ygo-matrix-sc-2 text-right">
-          {inputValues.yugiohCardNumber}
+          {inputValues.mtgCardNumber}
         </div>
 
         <div
           className={
             "absolute left-[58px] right-[56px] text-[22.25px] leading-[22.25px] font-ygo-matrix-book " +
-            (inputValues.yugiohTemplate === "spell" ||
-            inputValues.yugiohTemplate === "trap"
+            (inputValues.mtgTemplate === "spell" ||
+            inputValues.mtgTemplate === "trap"
               ? "top-[810px]"
               : "top-[845px]")
           }
         >
-          {inputValues.yugiohEffect}
+          {inputValues.mtgEffect}
         </div>
 
-        {inputValues.yugiohTemplate === "spell" ||
-        inputValues.yugiohTemplate === "trap" ? (
+        {inputValues.mtgTemplate === "spell" ||
+        inputValues.mtgTemplate === "trap" ? (
           <div></div>
         ) : (
           <div>
@@ -95,28 +95,28 @@ const YugiohCard = forwardRef(
               className="absolute bottom-[62px] right-[212px] text-[26px] font-ygo-stone-serif-sc-bold"
               style={{ textAlign: "right" }}
             >
-              ATK/{inputValues.yugiohAttack}
+              ATK/{inputValues.mtgAttack}
             </div>
             <div
               className="absolute bottom-[62px] right-[57px] text-[26px] font-ygo-stone-serif-sc-bold"
               style={{ textAlign: "right" }}
             >
-              DEF/{inputValues.yugiohDefense}
+              DEF/{inputValues.mtgDefense}
             </div>
           </div>
         )}
 
         <div className="select-none absolute bottom-[17px] right-[315px] left-[36px] font-ygo-matrix-sc-2 text-[32px] overflow-hidden whitespace-nowrap">
-          {inputValues.yugiohIdentifier}
+          {inputValues.mtgIdentifier}
         </div>
 
         <div className="select-none absolute bottom-[17px] right-[60px] left-[315px] font-ygo-matrix-sc-2 text-[32px] text-right overflow-hidden whitespace-nowrap flex flex-row gap-1.5 items-center justify-end">
           <span className="text-[24px] font-serif">©</span>
-          {inputValues.yugiohCopyright}
+          {inputValues.mtgCopyright}
         </div>
 
         <div
-          style={{ backgroundImage: `url("./yugioh/icons/seal.png)` }}
+          style={{ backgroundImage: `url("./mtg/icons/seal.png)` }}
           className="object-fit bg-center bg-cover select-none absolute rounded-[2px] bottom-[50px] right-[50px] w-[24px] h-[24px] object-cover"
         ></div>
       </div>
@@ -124,4 +124,4 @@ const YugiohCard = forwardRef(
   }
 );
 
-export default YugiohCard;
+export default MtgCard;
