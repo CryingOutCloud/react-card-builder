@@ -61,9 +61,8 @@ function App() {
     yugiohCopyright: "2025 KONAMI",
 
     mtgCardType: "Creature",
-    mtgElement: "none",
     mtgManaCost: "w",
-    mtgTemplate: "normal",
+    mtgTemplate: "none",
     mtgRarity: "mr",
     mtgRulesText:
       'If this card is banished: You can Special Summon 1 Level 4 or lower LIGHT Spellcaster monster from your hand or Deck, except "Astral Sorcerer of the Mystic Veil." You can only use each effect of "Astral Sorcerer of the Mystic Veil" once per turn.',
@@ -73,6 +72,7 @@ function App() {
     mtgToughness: 3,
     mtgNumber: 1,
     mtgTotal: 1,
+    mtgCardNumber: "1/200 - EN - 1",
     mtgLanguage: "EN",
     mtgSet: "WOW",
     mtgCopyright: "2025 Wizards of the Coast",
@@ -277,7 +277,7 @@ function App() {
                 />
               )}
 
-              {cardBuilderType === 1 && (
+              {cardBuilderType === 2 && (
                 <MtgCard
                   canvasPath={canvasPath}
                   inputValues={inputValues}
