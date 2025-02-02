@@ -59,6 +59,23 @@ function App() {
     yugiohDefense: 1600,
     yugiohIdentifier: "1234567890",
     yugiohCopyright: "2025 KONAMI",
+
+    mtgCardType: "Creature",
+    mtgElement: "none",
+    mtgManaCost: "w",
+    mtgTemplate: "normal",
+    mtgRarity: "mr",
+    mtgRulesText:
+      'If this card is banished: You can Special Summon 1 Level 4 or lower LIGHT Spellcaster monster from your hand or Deck, except "Astral Sorcerer of the Mystic Veil." You can only use each effect of "Astral Sorcerer of the Mystic Veil" once per turn.',
+    mtgFlavorText:
+      "The best part about a beachside concert is that there's always room for one more.",
+    mtgPower: 3,
+    mtgToughness: 3,
+    mtgNumber: 1,
+    mtgTotal: 1,
+    mtgLanguage: "EN",
+    mtgSet: "WOW",
+    mtgCopyright: "2025 Wizards of the Coast",
   });
 
   const handleInputChange = (e) => {
@@ -145,7 +162,7 @@ function App() {
     },
     {
       name: "Mtg",
-      backImage: "./mtg/cards/normal_back.png",
+      backImage: "./mtg/cards/normal_back.jpeg",
     },
   ];
 
