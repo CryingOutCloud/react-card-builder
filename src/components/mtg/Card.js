@@ -17,27 +17,38 @@ const MtgCard = forwardRef(
         />
 
         <div
-          style={{ lineHeight: "85px" }}
-          className="select-none absolute top-[36px] left-[58px] font-ygo-matrix-sc-2 text-[84px]"
+          style={{ lineHeight: "42px" }}
+          className="select-none absolute top-[64px] left-[62px] font-mtg-beleren-b text-[40px]"
         >
           {inputValues.name}
         </div>
 
-        <div className="absolute flex flex-col items-center justify-center w-20 h-20 text-center text-white font-memo text-[48px] top-[42px] left-[38px]">
+        <div
+          style={{ lineHeight: "42px" }}
+          className="select-none absolute top-[611px] left-[64px] font-mtg-beleren-b text-[34px]"
+        >
+          {inputValues.mtgCardType}
+        </div>
+
+        <div className="absolute flex flex-col items-center justify-center w-20 h-20 text-center text-white font-memo text-[48px] top-[42px] right-[38px]">
           {inputValues.mtgManaCost}
         </div>
 
-        <div className="absolute left-[82px] bottom-[270px] text-[30px] font-ygo-matrix-sc-2 text-left">
+        <div className="absolute left-[82px] bottom-[270px] text-[30px] font-mtg-beleren-b text-left">
           {inputValues.mtgEdition}
         </div>
 
-        <div className="absolute right-[82px] bottom-[270px] text-[30px] font-ygo-matrix-sc-2 text-right">
-          {inputValues.mtgCardNumber}
+        <div className="absolute bottom-[43px] left-[48px] text-[18px] text-white font-mtg-beleren-bsc text-right">
+          {inputValues.mtgRarity} {inputValues.mtgCardNumber}
+        </div>
+
+        <div className="absolute bottom-[23px] left-[48px] text-[18px] text-white font-mtg-beleren-bsc text-right">
+          {inputValues.mtgSet} • {inputValues.mtgLanguage}
         </div>
 
         <div
           className={
-            "absolute left-[58px] right-[56px] text-[22.25px] leading-[22.25px] font-ygo-matrix-book " + "top-[845px]"
+            "absolute left-[58px] right-[56px] text-[22.25px] leading-[22.25px] font-mtg-beleren-b " + "top-[845px]"
           }
         >
           {inputValues.mtgRulesText}
@@ -45,20 +56,20 @@ const MtgCard = forwardRef(
       
         <div>
           <div
-            className="absolute bottom-[62px] right-[212px] text-[26px] font-ygo-stone-serif-sc-bold"
+            className="absolute bottom-[57px] right-[111px] text-[40px] font-mtg-beleren-b"
             style={{ textAlign: "right" }}
           >
-            {inputValues.mtgPower}/
+            {inputValues.mtgPower}
           </div>
           <div
-            className="absolute bottom-[62px] right-[57px] text-[26px] font-ygo-stone-serif-sc-bold"
+            className="absolute bottom-[57px] right-[75px] text-[40px] font-mtg-beleren-b"
             style={{ textAlign: "right" }}
           >
             {inputValues.mtgToughness}
           </div>
         </div>
 
-        <div className="select-none absolute bottom-[17px] right-[60px] left-[315px] font-ygo-matrix-sc-2 text-[32px] text-right overflow-hidden whitespace-nowrap flex flex-row gap-1.5 items-center justify-end">
+        <div className="select-none absolute bottom-[17px] right-[60px] left-[315px] font-mtg-beleren-b text-[32px] text-right overflow-hidden whitespace-nowrap flex flex-row gap-1.5 items-center justify-end">
           <span className="text-[24px] font-serif">©</span>
           {inputValues.mtgCopyright}
         </div>

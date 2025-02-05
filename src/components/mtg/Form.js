@@ -142,6 +142,26 @@ const MtgForm = ({
 
       <div className="w-full mb-4">
         <label
+          htmlFor="mtgRarity"
+          className="block select-none mb-1 text-xs font-medium text-neutral-900 dark:text-neutral-300"
+        >
+          Rarity:
+        </label>
+        <select
+          onChange={handleInputChange}
+          name="mtgRarity"
+          className="cursor-pointer bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-800 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          value={inputValues.mtgRarity}
+        >
+          <option value="M">Mythic Rare</option>
+          <option value="R">Rare</option>
+          <option value="U">Uncommon</option>
+          <option value="C">Common</option>
+        </select>
+      </div>
+
+      <div className="w-full mb-4">
+        <label
           htmlFor="mtgArtist"
           className="block select-none mb-1 text-xs font-medium text-neutral-900 dark:text-neutral-300"
         >
@@ -174,6 +194,49 @@ const MtgForm = ({
 
       <div className="w-full mb-4">
         <label
+          htmlFor="mtgSet"
+          className="block select-none mb-1 text-xs font-medium text-neutral-900 dark:text-neutral-300"
+        >
+          Card Number:
+        </label>
+        <input
+          type="text"
+          name="mtgSet"
+          className="bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-800 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          value={inputValues.mtgSet}
+          onChange={handleInputChange}
+        />
+      </div>
+
+      <div className="w-full mb-4">
+        <label
+          htmlFor="mtgLanguage"
+          className="block select-none mb-1 text-xs font-medium text-neutral-900 dark:text-neutral-300"
+        >
+          Rarity:
+        </label>
+        <select
+          onChange={handleInputChange}
+          name="mtgLanguage"
+          className="cursor-pointer bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-neutral-800 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          value={inputValues.mtgLanguage}
+        >
+          <option value="EN">English</option>
+          <option value="ES">Spanish</option>
+          <option value="FR">French</option>
+          <option value="DE">German</option>
+          <option value="IT">Italian</option>
+          <option value="PT">Portuguese</option>
+          <option value="JA">Japanese</option>
+          <option value="KO">Korean</option>
+          <option value="ZHS">Simplified Chinese</option>
+          <option value="ZHT">Traditional Chinese</option>
+          <option value="PH">Phyrexian</option>
+        </select>
+      </div>
+
+      <div className="w-full mb-4">
+        <label
           htmlFor="mtgCopyright"
           className="block select-none mb-1 text-xs font-medium text-neutral-900 dark:text-neutral-300"
         >
@@ -199,8 +262,8 @@ const MtgForm = ({
           type="range"
           name="mtgPower"
           min="0"
-          max="9900"
-          step="100"
+          max="20"
+          step="1"
           className="pl-0.5 pr-0.25 cursor-pointer bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-neutral-800 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           onChange={handleInputChange}
           value={inputValues.mtgPower}
@@ -218,8 +281,8 @@ const MtgForm = ({
           type="range"
           name="mtgToughness"
           min="0"
-          max="9900"
-          step="100"
+          max="20"
+          step="1"
           className="pl-0.5 pr-0.25 cursor-pointer bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-neutral-800 dark:border-neutral-600 dark:placeholder-neutral-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           onChange={handleInputChange}
           value={inputValues.mtgToughness}

@@ -189,6 +189,33 @@
 }
 
 
+/*************************************/
+
+@font-face {
+  font-family: 'belerenb';
+  src: url('./fonts/mtg/beleren-b.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'belerenbsc';
+  src: url('./fonts/mtg/beleren-bsc.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-mtg-beleren-b {
+  font-family: 'belerenb', sans-serif;
+}
+
+.font-mtg-beleren-bsc {
+  font-family: 'belerenbsc', sans-serif;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
